@@ -41,7 +41,7 @@ sudo a2enmod rewrite
 
 echo "-- Setting document root --"
 sudo rm -rf /var/www
-sudo ln -fs /vagrant/public /var/www
+sudo ln -fs /vagrant/laravel/public /var/www
 
 echo "--- What developer codes without errors turned on? Not you, master. ---"
 sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
