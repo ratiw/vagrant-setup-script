@@ -64,3 +64,7 @@ sudo mv composer.phar /usr/local/bin/composer
 echo ""
 echo "All done."
 
+echo ""
+echo "To use Tinker command in Laravel 4. Comment out line 'disable_functions' in /etc/php5/cli/php.ini"
+
+
