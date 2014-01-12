@@ -30,6 +30,9 @@ sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-mysql php5-pgsql p
 echo "-- Installing and configuring Xdebut --"
 sudo apt-get install -y php5-xdebug
 
+echo "-- Installing Thai language support --"
+sudo apt-get install -y language-pack-th ttf-thai-tlwg
+
 cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
 xdebug.scream=1
 xdebug.cli_color=1
