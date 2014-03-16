@@ -59,6 +59,11 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 echo "-- Installing phpMyAdmin --"
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/dbconfig-install boolean true'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/app-password-confirm password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/admin-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/mysql/app-pass password root'
+sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect none'
 sudo apt-get install -y phpmyadmin
 
 
