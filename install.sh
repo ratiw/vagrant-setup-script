@@ -67,6 +67,10 @@ sudo debconf-set-selections <<< 'phpmyadmin phpmyadmin/reconfigure-webserver mul
 sudo apt-get install -y phpmyadmin
 
 
+echo "-- Merge phpMyAdmin config to default Apache2 config --"
+sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.config.original
+sudo bash -c 'cat /etc/phpmyadmin/apache.conf >> /etc/apache2/apache2.conf'
+
 echo ""
 echo "All done."
 
