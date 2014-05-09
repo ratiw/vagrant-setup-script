@@ -26,9 +26,11 @@ sudo chown vagrant:vagrant /home/vagrant/.gitconfig
 sudo add-apt-repository -y ppa:ondrej/php5
 sudo apt-get update
 
+echo "-- Installing SQLite Server --"
+sudo apt-get install -y sqlite
 
 echo "-- Installing PHP-specific packages --"
-sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core php5-xdebug
+sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql php5-sqlite git-core php5-xdebug
 cat << EOF | sudo tee -a /etc/php5/mods-available/xdebug.ini
 xdebug.scream=1
 xdebug.cli_color=1
