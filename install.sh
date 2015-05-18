@@ -22,8 +22,7 @@ fi
 echo "-- Installing base packages --"
 sudo apt-get install -qq vim wget curl unzip git-core ack-grep software-properties-common build-essential python-software-properties
 # Git config and set Owner
-curl --silent -L $github_url/helpers/gitconfig > /home/vagrant/.gitconfig
-sudo chown vagrant:vagrant /home/vagrant/.gitconfig
+curl --silent -L $github_url/helpers/gitconfig > ~/.gitconfig
 
 # Common fixes for git
 git config --global http.postBuffer 65536000
