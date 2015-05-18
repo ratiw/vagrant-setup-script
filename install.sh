@@ -151,7 +151,7 @@ sudo apt-get update
 # -qq implies -y --force-yes
 sudo apt-get install -qq nginx
 
-sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
+sudo sed -i "s/# server_names_hash_bucket_size.*/server_names_hash_bucket_size 64;/" /etc/nginx/nginx.conf
 
 # Nginx enabling and disabling virtual hosts
 curl --silent -L $github_url/helpers/ngxen.sh > ngxen
