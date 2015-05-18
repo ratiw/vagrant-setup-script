@@ -2,8 +2,7 @@
 
 echo "-- Change Ubuntu's source update server to mirror1.ku.ac.th --"
 
-sudo sed -i 's/us.archive.ubuntu.com/mirror1.ku.ac.th/g' /etc/apt/sources.list
-sudo sed -i 's/security.ubuntu.com/mirror1.ku.ac.th/g' /etc/apt/sources.list
+sudo sed -i 's/us.archive.ubuntu.com/th.archive.ubuntu.com/g' /etc/apt/sources.list
 
 echo "-- Now updating the packages list --"
 sudo apt-get update
